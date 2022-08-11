@@ -28,23 +28,23 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 
-type RegistRequest struct {
+type RegisteRequest struct {
 	Phone  string `protobuf:"bytes,1,opt,name=Phone,proto3" json:"Phone,omitempty"`
 	Source uint32 `protobuf:"fixed32,2,opt,name=Source,proto3" json:"Source,omitempty"`
 }
 
-func (m *RegistRequest) Reset()         { *m = RegistRequest{} }
-func (m *RegistRequest) String() string { return proto.CompactTextString(m) }
-func (*RegistRequest) ProtoMessage()    {}
-func (*RegistRequest) Descriptor() ([]byte, []int) {
+func (m *RegisteRequest) Reset()         { *m = RegisteRequest{} }
+func (m *RegisteRequest) String() string { return proto.CompactTextString(m) }
+func (*RegisteRequest) ProtoMessage()    {}
+func (*RegisteRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_9efa92dae3d6ec46, []int{0}
 }
-func (m *RegistRequest) XXX_Unmarshal(b []byte) error {
+func (m *RegisteRequest) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
-func (m *RegistRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+func (m *RegisteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
-		return xxx_messageInfo_RegistRequest.Marshal(b, m, deterministic)
+		return xxx_messageInfo_RegisteRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
 		n, err := m.MarshalTo(b)
@@ -54,50 +54,50 @@ func (m *RegistRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error
 		return b[:n], nil
 	}
 }
-func (m *RegistRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegistRequest.Merge(m, src)
+func (m *RegisteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RegisteRequest.Merge(m, src)
 }
-func (m *RegistRequest) XXX_Size() int {
+func (m *RegisteRequest) XXX_Size() int {
 	return m.Size()
 }
-func (m *RegistRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegistRequest.DiscardUnknown(m)
+func (m *RegisteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_RegisteRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RegistRequest proto.InternalMessageInfo
+var xxx_messageInfo_RegisteRequest proto.InternalMessageInfo
 
-func (m *RegistRequest) GetPhone() string {
+func (m *RegisteRequest) GetPhone() string {
 	if m != nil {
 		return m.Phone
 	}
 	return ""
 }
 
-func (m *RegistRequest) GetSource() uint32 {
+func (m *RegisteRequest) GetSource() uint32 {
 	if m != nil {
 		return m.Source
 	}
 	return 0
 }
 
-type RegistResponse struct {
-	Code    string      `protobuf:"bytes,1,opt,name=Code,proto3" json:"Code,omitempty"`
-	Message string      `protobuf:"bytes,2,opt,name=Message,proto3" json:"Message,omitempty"`
-	Data    *RegistData `protobuf:"bytes,3,opt,name=Data,proto3" json:"Data,omitempty"`
+type RegisteResponse struct {
+	Code    string       `protobuf:"bytes,1,opt,name=Code,proto3" json:"Code,omitempty"`
+	Message string       `protobuf:"bytes,2,opt,name=Message,proto3" json:"Message,omitempty"`
+	Data    *RegisteData `protobuf:"bytes,3,opt,name=Data,proto3" json:"Data,omitempty"`
 }
 
-func (m *RegistResponse) Reset()         { *m = RegistResponse{} }
-func (m *RegistResponse) String() string { return proto.CompactTextString(m) }
-func (*RegistResponse) ProtoMessage()    {}
-func (*RegistResponse) Descriptor() ([]byte, []int) {
+func (m *RegisteResponse) Reset()         { *m = RegisteResponse{} }
+func (m *RegisteResponse) String() string { return proto.CompactTextString(m) }
+func (*RegisteResponse) ProtoMessage()    {}
+func (*RegisteResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_9efa92dae3d6ec46, []int{1}
 }
-func (m *RegistResponse) XXX_Unmarshal(b []byte) error {
+func (m *RegisteResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
-func (m *RegistResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+func (m *RegisteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
-		return xxx_messageInfo_RegistResponse.Marshal(b, m, deterministic)
+		return xxx_messageInfo_RegisteResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
 		n, err := m.MarshalTo(b)
@@ -107,55 +107,55 @@ func (m *RegistResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return b[:n], nil
 	}
 }
-func (m *RegistResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegistResponse.Merge(m, src)
+func (m *RegisteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RegisteResponse.Merge(m, src)
 }
-func (m *RegistResponse) XXX_Size() int {
+func (m *RegisteResponse) XXX_Size() int {
 	return m.Size()
 }
-func (m *RegistResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegistResponse.DiscardUnknown(m)
+func (m *RegisteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_RegisteResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RegistResponse proto.InternalMessageInfo
+var xxx_messageInfo_RegisteResponse proto.InternalMessageInfo
 
-func (m *RegistResponse) GetCode() string {
+func (m *RegisteResponse) GetCode() string {
 	if m != nil {
 		return m.Code
 	}
 	return ""
 }
 
-func (m *RegistResponse) GetMessage() string {
+func (m *RegisteResponse) GetMessage() string {
 	if m != nil {
 		return m.Message
 	}
 	return ""
 }
 
-func (m *RegistResponse) GetData() *RegistData {
+func (m *RegisteResponse) GetData() *RegisteData {
 	if m != nil {
 		return m.Data
 	}
 	return nil
 }
 
-type RegistData struct {
+type RegisteData struct {
 	Code string `protobuf:"bytes,1,opt,name=Code,proto3" json:"Code,omitempty"`
 }
 
-func (m *RegistData) Reset()         { *m = RegistData{} }
-func (m *RegistData) String() string { return proto.CompactTextString(m) }
-func (*RegistData) ProtoMessage()    {}
-func (*RegistData) Descriptor() ([]byte, []int) {
+func (m *RegisteData) Reset()         { *m = RegisteData{} }
+func (m *RegisteData) String() string { return proto.CompactTextString(m) }
+func (*RegisteData) ProtoMessage()    {}
+func (*RegisteData) Descriptor() ([]byte, []int) {
 	return fileDescriptor_9efa92dae3d6ec46, []int{2}
 }
-func (m *RegistData) XXX_Unmarshal(b []byte) error {
+func (m *RegisteData) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
-func (m *RegistData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+func (m *RegisteData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
-		return xxx_messageInfo_RegistData.Marshal(b, m, deterministic)
+		return xxx_messageInfo_RegisteData.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
 		n, err := m.MarshalTo(b)
@@ -165,19 +165,19 @@ func (m *RegistData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return b[:n], nil
 	}
 }
-func (m *RegistData) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegistData.Merge(m, src)
+func (m *RegisteData) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RegisteData.Merge(m, src)
 }
-func (m *RegistData) XXX_Size() int {
+func (m *RegisteData) XXX_Size() int {
 	return m.Size()
 }
-func (m *RegistData) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegistData.DiscardUnknown(m)
+func (m *RegisteData) XXX_DiscardUnknown() {
+	xxx_messageInfo_RegisteData.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RegistData proto.InternalMessageInfo
+var xxx_messageInfo_RegisteData proto.InternalMessageInfo
 
-func (m *RegistData) GetCode() string {
+func (m *RegisteData) GetCode() string {
 	if m != nil {
 		return m.Code
 	}
@@ -349,9 +349,9 @@ func (m *LoginData) GetCode() string {
 }
 
 func init() {
-	proto.RegisterType((*RegistRequest)(nil), "customer.RegistRequest")
-	proto.RegisterType((*RegistResponse)(nil), "customer.RegistResponse")
-	proto.RegisterType((*RegistData)(nil), "customer.RegistData")
+	proto.RegisterType((*RegisteRequest)(nil), "customer.RegisteRequest")
+	proto.RegisterType((*RegisteResponse)(nil), "customer.RegisteResponse")
+	proto.RegisterType((*RegisteData)(nil), "customer.RegisteData")
 	proto.RegisterType((*LoginRequest)(nil), "customer.LoginRequest")
 	proto.RegisterType((*LoginResponse)(nil), "customer.LoginResponse")
 	proto.RegisterType((*LoginData)(nil), "customer.LoginData")
@@ -360,32 +360,32 @@ func init() {
 func init() { proto.RegisterFile("customer.proto", fileDescriptor_9efa92dae3d6ec46) }
 
 var fileDescriptor_9efa92dae3d6ec46 = []byte{
-	// 397 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x92, 0xbd, 0x6e, 0xe2, 0x40,
-	0x14, 0x85, 0x19, 0xfe, 0xb9, 0xbb, 0xb0, 0xd2, 0x80, 0xc0, 0xeb, 0xc2, 0x6b, 0xb9, 0x59, 0x8b,
-	0x02, 0x4b, 0x6c, 0x87, 0xb4, 0xcd, 0xb2, 0xdb, 0x6d, 0x24, 0x64, 0x22, 0xa5, 0x1e, 0xf0, 0x60,
-	0x5b, 0x02, 0x0f, 0x99, 0x19, 0x27, 0x4a, 0x9b, 0x27, 0x88, 0x94, 0x97, 0xc9, 0x23, 0xa4, 0x44,
-	0x4a, 0x93, 0x32, 0x82, 0x3c, 0x48, 0x84, 0xff, 0x20, 0x80, 0x52, 0xa4, 0x9b, 0x73, 0xef, 0x3d,
-	0xdf, 0xdc, 0x33, 0x1a, 0x68, 0x4c, 0x43, 0x21, 0xd9, 0x82, 0xf2, 0xde, 0x92, 0x33, 0xc9, 0x70,
-	0x35, 0xd5, 0xea, 0x3f, 0xd7, 0x97, 0x5e, 0x38, 0xe9, 0x4d, 0xd9, 0xc2, 0x5a, 0x50, 0x49, 0xae,
-	0x28, 0x17, 0xd4, 0x92, 0x3c, 0x14, 0xc2, 0x72, 0xe8, 0x4c, 0x72, 0x4a, 0x2d, 0x97, 0x31, 0x77,
-	0x4e, 0xa5, 0xe7, 0x73, 0x67, 0x49, 0xb8, 0xbc, 0xb1, 0x48, 0x10, 0x30, 0x49, 0xa4, 0xcf, 0x02,
-	0x11, 0x03, 0x8d, 0xdf, 0x50, 0xb7, 0xa9, 0xeb, 0x0b, 0x69, 0xd3, 0xcb, 0x90, 0x0a, 0x89, 0x5b,
-	0x50, 0x1a, 0x79, 0x2c, 0xa0, 0x0a, 0xd2, 0x91, 0x59, 0xb3, 0x63, 0x81, 0xdb, 0x50, 0x1e, 0xb3,
-	0x90, 0x4f, 0xa9, 0x92, 0xd7, 0x91, 0x59, 0xb1, 0x13, 0x65, 0x78, 0xd0, 0x48, 0xed, 0x62, 0xc9,
-	0x02, 0x41, 0x31, 0x86, 0xe2, 0x90, 0x39, 0xa9, 0x3d, 0x3a, 0x63, 0x05, 0x2a, 0x67, 0x54, 0x08,
-	0xe2, 0xc6, 0xf6, 0x9a, 0x9d, 0x4a, 0x6c, 0x42, 0xf1, 0x2f, 0x91, 0x44, 0x29, 0xe8, 0xc8, 0xfc,
-	0xd2, 0x6f, 0xf5, 0xb2, 0xb8, 0x31, 0x75, 0xdb, 0xb3, 0xa3, 0x09, 0x43, 0x07, 0xd8, 0xd5, 0x4e,
-	0xdd, 0x62, 0x9c, 0xc3, 0xd7, 0xff, 0xcc, 0xf5, 0x83, 0x8f, 0x93, 0xa8, 0x50, 0x1d, 0x11, 0x21,
-	0xae, 0x19, 0x77, 0x92, 0x65, 0x32, 0x9d, 0x51, 0x0b, 0x7b, 0xd4, 0x19, 0xd4, 0x13, 0xea, 0xa7,
-	0x02, 0xfe, 0x7c, 0x17, 0xb0, 0xb9, 0x0b, 0x18, 0x41, 0xf7, 0xf2, 0xfd, 0x80, 0x5a, 0x56, 0x3a,
-	0x75, 0x47, 0xff, 0x01, 0x41, 0x75, 0x98, 0xb8, 0xf1, 0x05, 0x94, 0xe3, 0xd7, 0xc0, 0x9d, 0xc3,
-	0x37, 0x4b, 0xe2, 0xab, 0xca, 0x71, 0x23, 0x4e, 0x60, 0xa8, 0xb7, 0x4f, 0xaf, 0xf7, 0xf9, 0x96,
-	0xf1, 0x2d, 0x1d, 0xb0, 0x78, 0x34, 0x30, 0x40, 0x5d, 0x3c, 0x86, 0x52, 0xb4, 0x06, 0x6e, 0x1f,
-	0xac, 0x9a, 0x62, 0x3b, 0x47, 0xf5, 0x84, 0xfa, 0x3d, 0xa2, 0x36, 0x8d, 0xec, 0xcb, 0x5a, 0xf3,
-	0x6d, 0x7f, 0x80, 0xba, 0x7f, 0x94, 0xc7, 0xb5, 0x86, 0x56, 0x6b, 0x0d, 0xbd, 0xac, 0x35, 0x74,
-	0xb7, 0xd1, 0x72, 0xab, 0x8d, 0x96, 0x7b, 0xde, 0x68, 0xb9, 0x49, 0x39, 0xfa, 0x85, 0xbf, 0xde,
-	0x02, 0x00, 0x00, 0xff, 0xff, 0xe2, 0xec, 0x29, 0x6e, 0xe8, 0x02, 0x00, 0x00,
+	// 399 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x92, 0xbf, 0x6e, 0x1a, 0x41,
+	0x10, 0xc6, 0x59, 0xfe, 0x33, 0x24, 0x20, 0x2d, 0x84, 0x1c, 0x57, 0x5c, 0xc8, 0x35, 0x21, 0x14,
+	0x9c, 0x44, 0x3a, 0x8a, 0x14, 0x21, 0xe9, 0x12, 0x09, 0x1d, 0x69, 0x52, 0x2e, 0xdc, 0x70, 0x5c,
+	0x04, 0xb7, 0x64, 0x77, 0x2f, 0x51, 0x5a, 0x3f, 0x81, 0x25, 0xbf, 0x8d, 0x9f, 0xc0, 0x25, 0x92,
+	0x1b, 0x97, 0x16, 0xf8, 0x41, 0x2c, 0xee, 0x9f, 0xb1, 0x41, 0x2e, 0xdc, 0xed, 0x37, 0x33, 0xdf,
+	0x6f, 0xe7, 0x5b, 0x2d, 0xd4, 0x66, 0x81, 0x54, 0x7c, 0x85, 0xa2, 0xbf, 0x16, 0x5c, 0x71, 0x5a,
+	0x4e, 0xb4, 0xfe, 0xcd, 0xf5, 0xd4, 0x22, 0x98, 0xf6, 0x67, 0x7c, 0x65, 0xad, 0x50, 0xb1, 0xbf,
+	0x28, 0x24, 0x5a, 0x4a, 0x04, 0x52, 0x5a, 0x0e, 0xce, 0x95, 0x40, 0xb4, 0x5c, 0xce, 0xdd, 0x25,
+	0xaa, 0x85, 0x27, 0x9c, 0x35, 0x13, 0xea, 0xbf, 0xc5, 0x7c, 0x9f, 0x2b, 0xa6, 0x3c, 0xee, 0xcb,
+	0x08, 0x68, 0x7e, 0x86, 0x9a, 0x8d, 0xae, 0x27, 0x15, 0xda, 0xf8, 0x27, 0x40, 0xa9, 0x68, 0x13,
+	0x0a, 0xe3, 0x05, 0xf7, 0x51, 0x23, 0x1d, 0xd2, 0xad, 0xd8, 0x91, 0xa0, 0x2d, 0x28, 0x4e, 0x78,
+	0x20, 0x66, 0xa8, 0x65, 0x3b, 0xa4, 0x5b, 0xb2, 0x63, 0x65, 0xfe, 0x86, 0x7a, 0xea, 0x97, 0x6b,
+	0xee, 0x4b, 0xa4, 0x14, 0xf2, 0x23, 0xee, 0x24, 0xfe, 0xf0, 0x4c, 0x35, 0x28, 0xfd, 0x40, 0x29,
+	0x99, 0x1b, 0xf9, 0x2b, 0x76, 0x22, 0xe9, 0x47, 0xc8, 0x7f, 0x65, 0x8a, 0x69, 0xb9, 0x0e, 0xe9,
+	0x56, 0x07, 0x6f, 0xfa, 0x69, 0xe0, 0x18, 0xbb, 0x6f, 0xda, 0xe1, 0x88, 0xf9, 0x1e, 0xaa, 0x07,
+	0xc5, 0x53, 0xf7, 0x98, 0x3f, 0xe1, 0xd5, 0x77, 0xee, 0x7a, 0xfe, 0xf3, 0x61, 0x74, 0x28, 0x8f,
+	0x99, 0x94, 0xff, 0xb8, 0x70, 0xe2, 0x75, 0x52, 0x9d, 0x52, 0x73, 0x07, 0xd4, 0x39, 0xbc, 0x8e,
+	0xa9, 0x2f, 0x8a, 0xf8, 0xe1, 0x51, 0xc4, 0xc6, 0x43, 0xc4, 0x10, 0x7a, 0x10, 0xf0, 0x1d, 0x54,
+	0xd2, 0xd2, 0xa9, 0x3b, 0x06, 0x97, 0x04, 0xca, 0xa3, 0xd8, 0x4d, 0x7f, 0x41, 0x31, 0x7a, 0x0e,
+	0xaa, 0x1d, 0xbd, 0x5a, 0x9c, 0x5f, 0x6f, 0x9f, 0xe8, 0x44, 0x19, 0x4c, 0xfd, 0xec, 0xfa, 0xee,
+	0x22, 0xdb, 0x34, 0xeb, 0xc9, 0x84, 0x25, 0xc2, 0x89, 0x21, 0xe9, 0xd1, 0x09, 0x14, 0xc2, 0x45,
+	0x68, 0xeb, 0xc9, 0xb2, 0x09, 0xf7, 0xed, 0x51, 0x3d, 0xa6, 0xb6, 0x43, 0x6a, 0xc3, 0x4c, 0x3f,
+	0xae, 0xb5, 0xdc, 0xf7, 0x87, 0xa4, 0xf7, 0x45, 0xbb, 0xda, 0x1a, 0x64, 0xb3, 0x35, 0xc8, 0xed,
+	0xd6, 0x20, 0xe7, 0x3b, 0x23, 0xb3, 0xd9, 0x19, 0x99, 0x9b, 0x9d, 0x91, 0x99, 0x16, 0xc3, 0xbf,
+	0xf8, 0xe9, 0x3e, 0x00, 0x00, 0xff, 0xff, 0x96, 0xc8, 0x3e, 0xda, 0xee, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -400,7 +400,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type CustomerClient interface {
-	Regist(ctx context.Context, in *RegistRequest, opts ...grpc.CallOption) (*RegistResponse, error)
+	Regist(ctx context.Context, in *RegisteRequest, opts ...grpc.CallOption) (*RegisteResponse, error)
 	Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error)
 }
 
@@ -412,8 +412,8 @@ func NewCustomerClient(cc *grpc.ClientConn) CustomerClient {
 	return &customerClient{cc}
 }
 
-func (c *customerClient) Regist(ctx context.Context, in *RegistRequest, opts ...grpc.CallOption) (*RegistResponse, error) {
-	out := new(RegistResponse)
+func (c *customerClient) Regist(ctx context.Context, in *RegisteRequest, opts ...grpc.CallOption) (*RegisteResponse, error) {
+	out := new(RegisteResponse)
 	err := c.cc.Invoke(ctx, "/customer.Customer/Regist", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -432,7 +432,7 @@ func (c *customerClient) Login(ctx context.Context, in *LoginRequest, opts ...gr
 
 // CustomerServer is the server API for Customer service.
 type CustomerServer interface {
-	Regist(context.Context, *RegistRequest) (*RegistResponse, error)
+	Regist(context.Context, *RegisteRequest) (*RegisteResponse, error)
 	Login(context.Context, *LoginRequest) (*LoginResponse, error)
 }
 
@@ -440,7 +440,7 @@ type CustomerServer interface {
 type UnimplementedCustomerServer struct {
 }
 
-func (*UnimplementedCustomerServer) Regist(ctx context.Context, req *RegistRequest) (*RegistResponse, error) {
+func (*UnimplementedCustomerServer) Regist(ctx context.Context, req *RegisteRequest) (*RegisteResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Regist not implemented")
 }
 func (*UnimplementedCustomerServer) Login(ctx context.Context, req *LoginRequest) (*LoginResponse, error) {
@@ -452,7 +452,7 @@ func RegisterCustomerServer(s *grpc.Server, srv CustomerServer) {
 }
 
 func _Customer_Regist_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegistRequest)
+	in := new(RegisteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -464,7 +464,7 @@ func _Customer_Regist_Handler(srv interface{}, ctx context.Context, dec func(int
 		FullMethod: "/customer.Customer/Regist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CustomerServer).Regist(ctx, req.(*RegistRequest))
+		return srv.(CustomerServer).Regist(ctx, req.(*RegisteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -504,7 +504,7 @@ var _Customer_serviceDesc = grpc.ServiceDesc{
 	Metadata: "customer.proto",
 }
 
-func (m *RegistRequest) Marshal() (dAtA []byte, err error) {
+func (m *RegisteRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
 	n, err := m.MarshalTo(dAtA)
@@ -514,7 +514,7 @@ func (m *RegistRequest) Marshal() (dAtA []byte, err error) {
 	return dAtA[:n], nil
 }
 
-func (m *RegistRequest) MarshalTo(dAtA []byte) (int, error) {
+func (m *RegisteRequest) MarshalTo(dAtA []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -534,7 +534,7 @@ func (m *RegistRequest) MarshalTo(dAtA []byte) (int, error) {
 	return i, nil
 }
 
-func (m *RegistResponse) Marshal() (dAtA []byte, err error) {
+func (m *RegisteResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
 	n, err := m.MarshalTo(dAtA)
@@ -544,7 +544,7 @@ func (m *RegistResponse) Marshal() (dAtA []byte, err error) {
 	return dAtA[:n], nil
 }
 
-func (m *RegistResponse) MarshalTo(dAtA []byte) (int, error) {
+func (m *RegisteResponse) MarshalTo(dAtA []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -574,7 +574,7 @@ func (m *RegistResponse) MarshalTo(dAtA []byte) (int, error) {
 	return i, nil
 }
 
-func (m *RegistData) Marshal() (dAtA []byte, err error) {
+func (m *RegisteData) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
 	n, err := m.MarshalTo(dAtA)
@@ -584,7 +584,7 @@ func (m *RegistData) Marshal() (dAtA []byte, err error) {
 	return dAtA[:n], nil
 }
 
-func (m *RegistData) MarshalTo(dAtA []byte) (int, error) {
+func (m *RegisteData) MarshalTo(dAtA []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -707,7 +707,7 @@ func encodeVarintCustomer(dAtA []byte, offset int, v uint64) int {
 	dAtA[offset] = uint8(v)
 	return offset + 1
 }
-func (m *RegistRequest) Size() (n int) {
+func (m *RegisteRequest) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -723,7 +723,7 @@ func (m *RegistRequest) Size() (n int) {
 	return n
 }
 
-func (m *RegistResponse) Size() (n int) {
+func (m *RegisteResponse) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -744,7 +744,7 @@ func (m *RegistResponse) Size() (n int) {
 	return n
 }
 
-func (m *RegistData) Size() (n int) {
+func (m *RegisteData) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -818,7 +818,7 @@ func sovCustomer(x uint64) (n int) {
 func sozCustomer(x uint64) (n int) {
 	return sovCustomer(uint64((x << 1) ^ uint64((int64(x) >> 63))))
 }
-func (m *RegistRequest) Unmarshal(dAtA []byte) error {
+func (m *RegisteRequest) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -841,10 +841,10 @@ func (m *RegistRequest) Unmarshal(dAtA []byte) error {
 		fieldNum := int32(wire >> 3)
 		wireType := int(wire & 0x7)
 		if wireType == 4 {
-			return fmt.Errorf("proto: RegistRequest: wiretype end group for non-group")
+			return fmt.Errorf("proto: RegisteRequest: wiretype end group for non-group")
 		}
 		if fieldNum <= 0 {
-			return fmt.Errorf("proto: RegistRequest: illegal tag %d (wire type %d)", fieldNum, wire)
+			return fmt.Errorf("proto: RegisteRequest: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		case 1:
@@ -913,7 +913,7 @@ func (m *RegistRequest) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
-func (m *RegistResponse) Unmarshal(dAtA []byte) error {
+func (m *RegisteResponse) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -936,10 +936,10 @@ func (m *RegistResponse) Unmarshal(dAtA []byte) error {
 		fieldNum := int32(wire >> 3)
 		wireType := int(wire & 0x7)
 		if wireType == 4 {
-			return fmt.Errorf("proto: RegistResponse: wiretype end group for non-group")
+			return fmt.Errorf("proto: RegisteResponse: wiretype end group for non-group")
 		}
 		if fieldNum <= 0 {
-			return fmt.Errorf("proto: RegistResponse: illegal tag %d (wire type %d)", fieldNum, wire)
+			return fmt.Errorf("proto: RegisteResponse: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		case 1:
@@ -1036,7 +1036,7 @@ func (m *RegistResponse) Unmarshal(dAtA []byte) error {
 				return io.ErrUnexpectedEOF
 			}
 			if m.Data == nil {
-				m.Data = &RegistData{}
+				m.Data = &RegisteData{}
 			}
 			if err := m.Data.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
@@ -1066,7 +1066,7 @@ func (m *RegistResponse) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
-func (m *RegistData) Unmarshal(dAtA []byte) error {
+func (m *RegisteData) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1089,10 +1089,10 @@ func (m *RegistData) Unmarshal(dAtA []byte) error {
 		fieldNum := int32(wire >> 3)
 		wireType := int(wire & 0x7)
 		if wireType == 4 {
-			return fmt.Errorf("proto: RegistData: wiretype end group for non-group")
+			return fmt.Errorf("proto: RegisteData: wiretype end group for non-group")
 		}
 		if fieldNum <= 0 {
-			return fmt.Errorf("proto: RegistData: illegal tag %d (wire type %d)", fieldNum, wire)
+			return fmt.Errorf("proto: RegisteData: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		case 1:

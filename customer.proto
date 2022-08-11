@@ -5,7 +5,7 @@ package customer;
 import "github.com/metaverse/truss/deftree/googlethirdparty/annotations.proto";
 
 service Customer {
-    rpc Regist (RegistRequest) returns (RegistResponse) {
+    rpc Regist (RegisteRequest) returns (RegisteResponse) {
         option (google.api.http) = {
             post: "customer/regist"
             body: "*"
@@ -19,18 +19,18 @@ service Customer {
     }
 }
 
-message RegistRequest {
+message RegisteRequest {
     string Phone = 1;
     fixed32 Source = 2;// 1 手机号
 }
 
-message RegistResponse {
+message RegisteResponse {
     string Code = 1;
     string Message = 2;
-    RegistData Data = 3;
+    RegisteData Data = 3;
 }
 
-message RegistData {
+message RegisteData {
     string Code = 1;
 }
 
