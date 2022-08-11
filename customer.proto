@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package demo;
+
+import "github.com/metaverse/truss/deftree/googlethirdparty/annotations.proto";
+
+service Customer {
+    rpc Regist (RegistRequest) returns (RegistResponse) {
+        option (google.api.http) = {
+            put: "customer/regist"
+            body: "*"
+        };
+    }
+    rpc Login (LoginRequest) returns (LoginResponse) {
+        option (google.api.http) = {
+            post: "customer/login"
+            body: "*"
+        };
+    }
+}
+
+message RegistRequest {
+    string Phone = 1;
+    fixed32 Source = 2;// 1 手机号
+}
+
+message RegistResponse {
+    string Code = 1;
+    string Message = 2;
+    RegistData Data = 3;
+}
+
+message RegistData {
+    string Code = 1;
+}
+
+message LoginRequest {
+    string Phone = 1;
+    string Password = 2;
+    string Code = 3;
+}
+
+message LoginResponse {
+    string Code = 1;
+    string Message = 2;
+    LoginData Data = 3;
+}
+
+message LoginData {
+    string Code = 1;
+}
