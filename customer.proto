@@ -7,7 +7,7 @@ import "github.com/metaverse/truss/deftree/googlethirdparty/annotations.proto";
 service Customer {
     rpc Registe (RegisteRequest) returns (RegisteResponse) {
         option (google.api.http) = {
-            post: "customer/regist"
+            post: "customer/registe"
             body: "*"
         };
     }
